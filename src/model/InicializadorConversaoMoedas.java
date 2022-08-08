@@ -65,43 +65,4 @@ public class InicializadorConversaoMoedas {
 
     }
 
-    public String getREAL_PARA_DOLAR() {
-        return REAL_PARA_DOLAR;
-    }
-
-    public String getREAL_PARA_EURO() {
-        return REAL_PARA_EURO;
-    }
-
-    public String getREAL_PARA_LIBRA_ESTERLINA() {
-        return REAL_PARA_LIBRA_ESTERLINA;
-    }
-
-    public String getREAL_PARA_PESO_ARGENTINO() {
-        return REAL_PARA_PESO_ARGENTINO;
-    }
-
-    public String getREAL_PARA_PESO_CHILENO() {
-        return REAL_PARA_PESO_CHILENO;
-    }
-
-    public String getDOLAR_PARA_REAL() {
-        return DOLAR_PARA_REAL;
-    }
-
-    public String getEURO_PARA_REAL() {
-        return EURO_PARA_REAL;
-    }
-
-    public String getLIBRA_ESTERLINA_PARA_REAL() {
-        return LIBRA_ESTERLINA_PARA_REAL;
-    }
-
-    public String getPESO_ARGENTINO_PARA_REAL() {
-        return PESO_ARGENTINO_PARA_REAL;
-    }
-
-    public String getPESO_CHILENO_PARA_REAL() {
-        return PESO_CHILENO_PARA_REAL;
-    }
 }
