@@ -2,10 +2,11 @@ package model;
 
 import enums.Moeda;
 import enums.TipoConversao;
+import interfaces.InicializadorConversao;
 
 import java.math.BigDecimal;
 
-public class InicializadorConversaoMoedas {
+public class InicializadorConversaoMoedas implements InicializadorConversao {
 
     private static final String REAL_PARA_DOLAR = "De Real para Dólar";
     private static final String REAL_PARA_EURO = "De Real para Euro";

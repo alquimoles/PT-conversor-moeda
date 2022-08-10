@@ -1,38 +1,38 @@
 package model;
 
+import java.math.BigDecimal;
+
 public class ConversorDeTemperatura {
 
-    private double valorConvertido;
+    private BigDecimal valorConvertido;
 
-    public double converterCelsiusParaFahrenheit(double valor){
-        valorConvertido = valor * 1.8 + 32;
+    public BigDecimal converterCelsiusParaFahrenheit(double valor){
+        valorConvertido = BigDecimal.valueOf(valor * 1.8 + 32);
         return valorConvertido;
     }
 
-    public double converterFahrenheitParaCelsius(double valor){
-        valorConvertido = (valor - 32) /1.8;
+    public BigDecimal converterFahrenheitParaCelsius(double valor){
+        valorConvertido = BigDecimal.valueOf((valor - 32) /1.8);
         return valorConvertido;
     }
 
-    public double converterCelsiusParaKelvin(double valor){
-        valorConvertido = valor + 273;
+    public BigDecimal converterCelsiusParaKelvin(double valor){
+        valorConvertido = BigDecimal.valueOf(valor + 273);
         return valorConvertido;
     }
 
-    public double converterKelvinParaCelsius(double valor){
-        valorConvertido = valor - 273;
+    public BigDecimal converterKelvinParaCelsius(double valor){
+        valorConvertido = BigDecimal.valueOf(valor - 273);
         return valorConvertido;
     }
 
-    public double converterKelvinParaFahrenheit(double valor){
-        valorConvertido = converterKelvinParaCelsius(valor);
-        valorConvertido = converterCelsiusParaFahrenheit(valorConvertido);
+    public BigDecimal converterKelvinParaFahrenheit(double valor){
+        valorConvertido = BigDecimal.valueOf(1.8*(valor-273)+32);
         return valorConvertido;
     }
 
-    public double converterFahrenheitParaKelvin(double valor){
-        valorConvertido = converterFahrenheitParaCelsius(valor);
-        valorConvertido = converterCelsiusParaKelvin(valorConvertido);
-        return valor;
+    public BigDecimal converterFahrenheitParaKelvin(double valor){
+        valorConvertido = BigDecimal.valueOf((valor + 459.67) *5/9);
+        return valorConvertido;
     }
 }

@@ -1,4 +1,5 @@
 import enums.TipoConversao;
+import interfaces.InicializadorConversao;
 import model.*;
 
 import javax.swing.*;
@@ -20,9 +21,11 @@ public class Principal {
                     "Conversões", JOptionPane.QUESTION_MESSAGE, null, new String[]
                             {conversaoDeMoeda, conversaoDeTemperatura}, "Escolha").toString();
 
+            InicializadorConversao inicializadorConversao = null;
+            String operacaoEspecifica = null;
             if (operacao.equals(conversaoDeMoeda)) {
-                InicializadorConversaoMoedas inicializadorConversaoMoedas = new InicializadorConversaoMoedas();
-                String operacaoMoedas = JOptionPane.showInputDialog(null, "Escolha uma moeda",
+                inicializadorConversao = new InicializadorConversaoMoedas();
+                operacaoEspecifica = JOptionPane.showInputDialog(null, "Escolha uma moeda",
                         "Moedas", JOptionPane.QUESTION_MESSAGE, null, new String[] {
                                 TipoConversao.REAL_PARA_DOLAR.getDescricao(),
                                 TipoConversao.REAL_PARA_EURO.getDescricao(),
@@ -36,18 +39,9 @@ public class Principal {
                                 TipoConversao.PESO_CHILENO_PARA_REAL.getDescricao()},
                         "Escolha").toString();
 
-                String valorString = JOptionPane.showInputDialog("Insira um valor");
-                Validador validador = new Validador();
-                if(!validador.verificar(valorString)){
-                    JOptionPane.showMessageDialog(null, "Valor Inválido");
-                } else{
-                    double valorInicial = validador.transformarEmDouble(valorString);
-                    BigDecimal valorConvertido = inicializadorConversaoMoedas.operarConversao(operacaoMoedas, valorInicial);
-                    JOptionPane.showMessageDialog(null, valorConvertido);
-                }
             } else if(operacao.equals(conversaoDeTemperatura)){
-                InicializadorConversaoTemperatura inicializadorConversaoTemperatura = new InicializadorConversaoTemperatura();
-                String operacaoTemperaturas = JOptionPane.showInputDialog(null, "Escolha a escala de temperatura",
+                inicializadorConversao = new InicializadorConversaoTemperatura();
+                operacaoEspecifica = JOptionPane.showInputDialog(null, "Escolha a escala de temperatura",
                         "Moedas", JOptionPane.QUESTION_MESSAGE, null, new String[] {
                                 TipoConversao.CELSIUS_PARA_FAHRENHEIT.getDescricao(),
                                 TipoConversao.CELSIUS_PARA_KELVIN.getDescricao(),
@@ -56,16 +50,15 @@ public class Principal {
                                 TipoConversao.KELVIN_PARA_CELSIUS.getDescricao(),
                                 TipoConversao.KELVIN_PARA_FAHRENHEIT.getDescricao(),},
                         "Escolha").toString();
-
-                String valorString = JOptionPane.showInputDialog("Insira um valor");
-                Validador validador = new Validador();
-                if(!validador.verificar(valorString)){
-                    JOptionPane.showMessageDialog(null, "Valor Inválido");
-                } else{
-                    double valorInicial = validador.transformarEmDouble(valorString);
-                    double valorConvertido = inicializadorConversaoTemperatura.operarConversao(operacaoTemperaturas, valorInicial);
-                    JOptionPane.showMessageDialog(null, valorConvertido);
-                }
+            }
+            String valorString = JOptionPane.showInputDialog("Insira um valor");
+            Validador validador = new Validador();
+            if(!validador.verificar(valorString)){
+                JOptionPane.showMessageDialog(null, "Valor Inválido");
+            } else{
+                double valorInicial = validador.transformarEmDouble(valorString);
+                BigDecimal valorConvertido = inicializadorConversao.operarConversao(operacaoEspecifica, valorInicial);
+                JOptionPane.showMessageDialog(null, valorConvertido);
             }
             executa = repetidor.tentaRepetir();
         }

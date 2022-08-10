@@ -1,6 +1,10 @@
 package model;
 
-public class InicializadorConversaoTemperatura {
+import interfaces.InicializadorConversao;
+
+import java.math.BigDecimal;
+
+public class InicializadorConversaoTemperatura implements InicializadorConversao {
 
     ConversorDeTemperatura conversorDeTemperatura = new ConversorDeTemperatura();
     private static final String CELSIUS_PARA_FAHRENHEIT = "Celsius para Fahrenheit";
@@ -11,7 +15,7 @@ public class InicializadorConversaoTemperatura {
     private static final String FAHRENHEIT_PARA_KELVIN = "Fahrenheit para Kelvin";
 
 
-    public double operarConversao(String operacaoTemperatura, double valorInicial) throws Exception {
+    public BigDecimal operarConversao(String operacaoTemperatura, double valorInicial) throws Exception {
         switch (operacaoTemperatura){
             case CELSIUS_PARA_FAHRENHEIT -> {
                 return conversorDeTemperatura.converterCelsiusParaFahrenheit(valorInicial);
