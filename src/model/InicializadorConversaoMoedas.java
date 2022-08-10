@@ -26,8 +26,6 @@ public class InicializadorConversaoMoedas {
     private Moeda moeda;
 
     public BigDecimal operarConversao(String operacaoMoedas, double valorInicial) throws Exception {
-        TipoConversao tipoConversao = TipoConversao.DOLAR_PARA_REAL;
-        int ordinal = tipoConversao.ordinal();
 
         switch (operacaoMoedas) {
             case REAL_PARA_DOLAR -> {

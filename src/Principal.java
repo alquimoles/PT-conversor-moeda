@@ -47,7 +47,7 @@ public class Principal {
                 }
             } else if(operacao.equals(conversaoDeTemperatura)){
                 InicializadorConversaoTemperatura inicializadorConversaoTemperatura = new InicializadorConversaoTemperatura();
-                String operacaoTemperaturas = JOptionPane.showInputDialog(null, "Escolha uma moeda",
+                String operacaoTemperaturas = JOptionPane.showInputDialog(null, "Escolha a escala de temperatura",
                         "Moedas", JOptionPane.QUESTION_MESSAGE, null, new String[] {
                                 TipoConversao.CELSIUS_PARA_FAHRENHEIT.getDescricao(),
                                 TipoConversao.CELSIUS_PARA_KELVIN.getDescricao(),
