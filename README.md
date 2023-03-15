@@ -8,7 +8,7 @@
 
 #### Marque esse projeto com uma estrela ⭐
 #### Siga as instruções das aulas e conteúdos 📚
-#### Visite a página do Challenge [Clicando aqui!](https://www.alura.com.br/challenges/oracle-one-java) 📃
+#### Visite a página do Challenge [Clicando aqui!](https://www.alura.com.br/challenges/oracle-one-back-end/conversordemoedas) 📃
 ---
 
 ## Conteúdo deste repositório
@@ -107,8 +107,7 @@ Em seguida, clique no botão <em>Browse</em> e busque o projeto no diretório lo
 1) Publique o projeto no GitHub
 2) Utilize o tópico:
 
-    - Turma 1: **challengeoneconversorbr**
-    - Turma 2: **challengeoneconversorbr2**
+    - Turma 4: **challengeoneconversorbr4**
 
 Vá na aba "Sobre" ou "About" do seu projeto no menu lateral que fica na esquerda dentro do repositório no GitHub
 Adicione a tag "**challengeoneconversorbr2**"
@@ -119,7 +118,7 @@ Adicione a tag "**challengeoneconversorbr2**"
 ---
 
 3) Preenche o formulário de entrega com o **link do projeto publicado com GitHub**
-🔹 [Link para o formulário](https://lp.alura.com.br/alura-latam-lp-entrega-de-challenge-one)
+🔹 [Link para o formulário](https://www.alura.com.br/challenges/oracle-one-back-end/conversordemoedas)
 
 ![formulario-pt](https://user-images.githubusercontent.com/91544872/179625254-3f72f4df-b169-4be9-a11d-0d874e71c992.png)
 
