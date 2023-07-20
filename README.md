@@ -107,10 +107,10 @@ Em seguida, clique no botão <em>Browse</em> e busque o projeto no diretório lo
 1) Publique o projeto no GitHub
 2) Utilize o tópico:
 
-    - Turma 4: **challengeoneconversorbr4**
+    - Turma 5: **challengeoneconversorbr5**
 
 Vá na aba "Sobre" ou "About" do seu projeto no menu lateral que fica na esquerda dentro do repositório no GitHub
-Adicione a tag "**challengeoneconversorbr4**"
+Adicione a tag "**challengeoneconversorbr5**"
 
 ![gif-vitrine](https://user-images.githubusercontent.com/91544872/153601047-62aee6cb-e3cf-42b3-92c3-7130c996113f.gif)
 
